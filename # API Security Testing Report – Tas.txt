@@ -1,0 +1,31 @@
+# API Security Testing Report – Task 13
+
+## Tool Used
+- Postman
+
+## APIs Tested
+- https://reqres.in
+- https://jsonplaceholder.typicode.com
+
+## Tests Performed
+- Authentication testing
+- Authorization (ID manipulation)
+- Input validation
+- Rate limiting observation
+- HTTP response analysis
+
+## Observations
+- GET requests returned 200 OK for valid resources
+- Login endpoint on Reqres returned 403 Forbidden due to server restrictions
+- Authentication was simulated using a public test API
+- Invalid user IDs returned empty or error responses
+- API accepted unexpected input values
+- No rate limiting was observed during rapid requests
+
+## OWASP API Risks Identified
+- API2: Broken Authentication
+- API5: Broken Authorization
+- API8: Security Misconfiguration
+
+## Conclusion
+The APIs demonstrate basic security controls, but weaknesses were observed in input validation and rate limiting.
